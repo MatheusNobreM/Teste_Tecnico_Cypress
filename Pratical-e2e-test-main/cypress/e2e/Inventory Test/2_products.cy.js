@@ -20,12 +20,30 @@ describe('Inventory - Products', () => {
     cy.wait(2000)
     productsPage.FilterHighLow()
     productsPage.CheckingIfHighLow()
+
+    cy.get('.inventory_item_price').then(($prices) => {
+      const prices = [...$prices].map((price) =>
+        parseFloat(price.innerText.replace('$', ''))
+      );
+
+      const sortedPrices = [...prices].sort((a, b) => b - a);
+      expect(prices).to.deep.equal(sortedPrices);
+    });
   });
 
   it('#3 Should sort products by price properly (low to high)', () => {
     cy.wait(2000)
     productsPage.FilterLowHigh()
     productsPage.CheckingIfLowHigh()
+    
+    cy.get('.inventory_item_price').then(($prices) => {
+      const prices = [...$prices].map((price) =>
+        parseFloat(price.innerText.replace('$', ''))
+      );
+  
+      const sortedPrices = [...prices].sort((a, b) => a - b);
+      expect(prices).to.deep.equal(sortedPrices);
+    });
   });
   
 });
