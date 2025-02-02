@@ -1,0 +1,20 @@
+class CheckoutElements{
+    LinkCart = () => '[data-test="shopping-cart-link"]'
+    Check = () => '[data-test="checkout"]'
+    FirstName = () => '[data-test="firstName"]'
+    LastName = () => '[data-test="lastName"]'
+    PostalCode = () => '[data-test="postalCode"]'
+    ContinueBtn = () => '[data-test="continue"]'
+    Overview = () => '[data-test="title"]'
+    FinishBtn = () => '[data-test="finish"]'
+    CompleteHeader = () => '[data-test="complete-header"]'
+    BackHomeBtn = () => '[data-test="back-to-products"]'
+    AddItem1 = () => '[data-test="add-to-cart-sauce-labs-backpack"]'
+    AddItem2 = () => '[data-test="add-to-cart-sauce-labs-bike-light"]'
+    AddItem3 = () => '[data-test="add-to-cart-sauce-labs-bolt-t-shirt"]'
+    AddItem4 = () => '[data-test="add-to-cart-sauce-labs-fleece-jacket"]'
+    ContinueShoppingBtn = () =>'[data-test="continue-shopping"]'
+    BadgeCart = () => '[data-test="shopping-cart-badge"]'
+    MsgError = () => '[data-test="error"]'
+}
+export default CheckoutElements
